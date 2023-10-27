@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1698349339 source:c:\users\1\onedrive\Рабочий стол\queue\queue\main.c
+	<stdio.h>
+	<stdlib.h>
+	"queue.h"
+
+1698347296 c:\users\1\onedrive\Рабочий стол\queue\queue\queue.h
+	<stdbool.h>
+
+1698349260 source:c:\users\1\onedrive\Рабочий стол\queue\queue\queue.c
+	"queue.h"
+	<stdio.h>
+	"stdbool.h"
+
