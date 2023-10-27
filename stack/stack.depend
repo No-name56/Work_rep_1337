@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1698253678 source:c:\users\1\onedrive\Рабочий стол\task1\stack\stack.c
+	"stack.h"
+	<stdio.h>
+	"stdbool.h"
+
+1698253772 c:\users\1\onedrive\Рабочий стол\task1\stack\stack.h
+	<stdbool.h>
+
+1698253679 source:c:\users\1\onedrive\Рабочий стол\task1\stack\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+
+1698417751 source:c:\users\1\onedrive\Рабочий стол\tasks lektronika\work_rep_1337\task1\stack\stack.c
+	"stack.h"
+	<stdio.h>
+	"stdbool.h"
+
+1698253772 c:\users\1\onedrive\Рабочий стол\tasks lektronika\work_rep_1337\task1\stack\stack.h
+	<stdbool.h>
+
+1698417722 source:c:\users\1\onedrive\Рабочий стол\tasks lektronika\work_rep_1337\task1\stack\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+
