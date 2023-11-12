@@ -1,0 +1,31 @@
+body {
+    color: #373737;
+    background: white;
+}
+
+body > h1 {
+    color: yellow;
+}
+
+.dark-mode {
+    color: white;
+    background: #000000;
+}
+
+.dark-mode > h1 {
+    color: blue;
+}
+
+body > div {
+    display: inline-block;
+    background-color: aquamarine;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.dark-mode > div {
+    display: inline-block;
+    background-color: red;
+    min-width: 120px;
+    min-height: 120px;
+}
