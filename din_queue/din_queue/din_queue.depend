@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1699880117 source:c:\users\1\onedrive\Рабочий стол\din_queue\din_queue\main.c
+	<stdio.h>
+	<stdlib.h>
+	"din_queue.h"
+
+1699880091 source:c:\users\1\onedrive\Рабочий стол\din_queue\din_queue\din_queue.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"din_queue.h"
+
+1699880138 c:\users\1\onedrive\Рабочий стол\din_queue\din_queue\din_queue.h
+	<stdbool.h>
+
