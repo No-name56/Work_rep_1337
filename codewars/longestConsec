@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+const char *strings[5] = {"aasvqjjot", "abbwwtrhhqq", "wvvfoojjb", "wwiwwd", "wqqhhsppahhhh"};
+
+char *longestConsec (const char *const strings[], int arr_len, int k)
+{
+    if ((arr_len == 0) || (k == 0) || k > arr_len)
+    {
+        char *result = calloc(1,1);
+        return result;
+    }
+    
+    int strlength[arr_len];
+    for (int i = 0; i < arr_len; i++)
+    {
+        strlength[i] = strlen(strings[i]);
+    }
+    
+    int max_length = 0;
+    int max_index = 0;
+    
+    for (int i = 0; i < arr_len - k + 1; i++)
+    {
+        int length = 0;
+        for(int j = 0; j < k; j++)
+        {
+            length += strlength[i+j];
+        }
+        if (length > max_length)
+        {
+            max_length = length;
+            max_index = i;
+        }
+    }
+    
+    char *result = calloc(max_length + 1, 1);
+    
+    for(int j = 0; j < k; j++)
+    {
+         strcat(result, strings[max_index + j]);
+    }
+    
+    return result;
+}
+int main()
+{
+    printf("%s", longestConsec(strings, 5, 4));
+
+    return 0;
+}
