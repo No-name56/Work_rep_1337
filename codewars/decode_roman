@@ -1,0 +1,72 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+unsigned decode_roman (const char *roman_number)
+{
+    int result = 0;
+    int lenght = strlen(roman_number);
+    
+    int num_arr[7] = {1,5,10,50,100,500,1000};
+    char let_arr[7] = {'I','V','X','L','C','D','M'};
+    int *arr = malloc(lenght * sizeof(int));
+    
+    for(int k = 0; k < lenght; k++)
+    {
+        for(int i = 0; i < 7; i++)
+        {
+            if(roman_number[k] == let_arr[i])
+            {
+                arr[k] = num_arr[i];
+            }
+        }
+    }
+    
+    
+    for(int i = 0; i < lenght; i++)
+    {
+        printf("%d, ", arr[i]);
+    }
+    
+    
+    int count = 0;
+    
+    while(count < lenght)
+    {
+        if(count == lenght - 1)
+        {
+            result += arr[count];
+            count++;
+        }
+        else if(arr[count] >= arr[count+1])
+        {
+            result += arr[count];
+            count++;
+        }
+        else
+        {
+            result += arr[count+1] - arr[count];
+            count += 2;
+        }
+    }
+    
+    free(arr);
+	return result;
+}
+
+int main()
+{
+    //MMMCCCXLII
+    const char* num = "MMMCCCXLII";
+    printf("\n%d", decode_roman(num));
+
+    return 0;
+}
