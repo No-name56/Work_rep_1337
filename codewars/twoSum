@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+const int numbers[5] = {1,2,3,4,5};
+
+void twoSum(unsigned count, const int numbers[count], int target, unsigned *index1, unsigned *index2)
+{
+    for(int i = 0; i < count - 1; i++)
+    {
+        for(int j = i + 1; j < count; j++)
+        {
+            if(numbers[i] + numbers[j] == target)
+            {
+                *index1 = i;
+                *index2 = j;
+            }
+        }
+    }
+    printf("%p", index1);
+    printf("\n%p", index2);
+    printf("\nSeva gay");
+}
+
+int main()
+{
+    unsigned *index1 = calloc(1, sizeof(unsigned));
+    unsigned *index2 = calloc(1, sizeof(unsigned));;
+    
+    twoSum(5, numbers, 8, index1, index2);
+    printf("\nSeva gay");
+
+    return 0;
+}
