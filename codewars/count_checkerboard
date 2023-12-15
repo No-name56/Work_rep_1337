@@ -1,0 +1,36 @@
+typedef unsigned long long ull;
+
+ull count_checkerboard(ull width, ull height, ull resolution) {
+   ull result = 0;
+    ull f_w = width/resolution;
+    ull f_h = height/resolution;
+    ull r_w = width%resolution;
+    ull r_h = height%resolution;
+    
+    result += f_w * f_h /2 * resolution * resolution;
+    
+    if (f_w%2 == 0 && f_h%2 == 0)
+    {
+        result += r_h * f_w * resolution /2;
+        result += r_w * f_h * resolution /2;
+    }
+    else if (f_w%2 == 0 && f_h%2 == 1)
+    {
+        result += r_h * f_w * resolution /2;
+        result += (f_h - 1) /2 * r_w * resolution;
+        result += r_w * r_h;
+    }
+    else if (f_w%2 == 1 && f_h%2 == 0)
+    {
+        result += (f_w - 1) /2 * r_h * resolution;
+        result += r_w * f_h * resolution /2;
+        result += r_w * r_h;
+    }
+    else
+    {
+        result += (f_w - 1) /2 * r_h * resolution + r_h * resolution;
+        result += ((f_h - 1) /2 * resolution + resolution) * r_w;
+    }
+    
+    return result;
+}
