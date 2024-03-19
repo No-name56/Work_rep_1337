@@ -1,0 +1,54 @@
+---
+:source:
+  :path: test
+  :file: test_stack.c
+:successes:
+- :test: test_pop_is_poping
+  :line: 16
+  :message: ''
+  :unity_test_time: 0
+- :test: test_push_is_pushing
+  :line: 25
+  :message: ''
+  :unity_test_time: 0
+- :test: test_init_is_initing
+  :line: 33
+  :message: ''
+  :unity_test_time: 0
+- :test: test_empty_stack_is_empty
+  :line: 42
+  :message: ''
+  :unity_test_time: 0
+- :test: test_not_empty_stack_is_not_empty
+  :line: 47
+  :message: ''
+  :unity_test_time: 0
+- :test: test_empty_stack_is_not_fool
+  :line: 54
+  :message: ''
+  :unity_test_time: 0
+- :test: test_full_stack_is_full
+  :line: 64
+  :message: ''
+  :unity_test_time: 0
+- :test: test_not_empty_stack_is_not_full
+  :line: 79
+  :message: ''
+  :unity_test_time: 0
+- :test: test_not_full_stack_is_not_full
+  :line: 84
+  :message: ''
+  :unity_test_time: 0
+- :test: 'test_stack_is_working_like_stack '
+  :line: 91
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 10
+  :passed: 10
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.05263039993587881
